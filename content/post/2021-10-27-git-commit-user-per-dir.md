@@ -1,7 +1,7 @@
 ---
 title: "git 使用includeIf配置多用户隔离"
 date: 2021-10-27T09:53:28+08:00
-draft: true
+draft: false
 tags: ["git",".gitconfig","includeif"]
 categories: ["TIL"]
 ---

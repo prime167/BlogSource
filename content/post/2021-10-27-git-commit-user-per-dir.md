@@ -56,7 +56,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 [includeIf "gitdir/i:E:/work/git/"]
     path = .gitconfig-work
 ```
-最后创建公司项目统一的配置文件%USERPROFILE%.gitconfig-work：
+最后创建公司项目的配置文件.gitconfig-work：
 
 ```.gitconfig
 [user]

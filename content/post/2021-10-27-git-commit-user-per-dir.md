@@ -12,7 +12,8 @@ categories: ["TIL"]
     name = xxx
     email = xxx+xxx@users.noreply.github.com
 ```
-无奈只好重新来一遍：删除GitHub仓库，删除本地.git 目录，git init，添加上述配置，提交，重新推送
+无奈只好重新来一遍：删除GitHub仓库，删除本地.git 目录，git init，添加上述配置，提交，重新推送。
+
 ## git 配置文件层级
 如上所述，在 git 中，有三个层级的配置文件：
 
@@ -20,6 +21,7 @@ categories: ["TIL"]
 * 用户级: $HOME/.gitconfig（Windows 为 **%USERPROFILE%.gitconfig** 即 **C:\Users\[CurrentLoginUser]\ .gitconfig** ），作用于用户的 git 配置；
 * Repo 级: .git/config，作用于Repo 中。
 如果有相同的配置，按照 Repo > 用户 > 系统 的优先级获取配置。
+
 ## [includeIf]
 从 git 2.13.0 开始，git 配置文件开始支持 Conditional Includes 的配置。通过设置 includeIf.<condition>.path，可以向命中 condition 的 git 仓库引入 path 指向的一个 git 配置文件中配置。
 
@@ -43,7 +45,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 个人项目与公司项目的差异点在：第一、使用的邮箱名不同， 个人项目会使用个人邮箱，公司项目使用公司邮箱。
 
 首先配置用户级的.gitconfig，在这里，我把默认用户配置为GitHub用户
-```
+```.gitconfig
 [user]
     name = xxx
     email = xxx+xxx@users.noreply.github.com
@@ -56,10 +58,28 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 ```
 最后创建公司项目统一的配置文件%USERPROFILE%.gitconfig-work：
 
-```
+```.gitconfig
 [user]
     name = 张三
     email = zhangsan@somecorp.com
+```
+或者将默认的用户也放到另一个config名为.gitconfig-github,然后使用**include**包含进.gitconfig
+
+**.gitconfig-github**:
+```.gitconfig
+[user]
+    name = xxx
+    email = xxx+xxx@users.noreply.github.com
+```
+**.gitconfig**:
+```.gitconfig
+...
+[include]
+    path =.gitconfig-github
+
+[includeIf "gitdir/i:E:/work/git/"]
+    path =.gitconfig-work
+...
 ```
 这样，除了E:/work/git/ 下面的repo使用公司的用户外，其他目录都是用GitHub用户。你可以根据自己的实际情况设置默认用户、创建并使用不同情景下使用的用户信息
 

@@ -62,3 +62,14 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
     email = zhangsan@somecorp.com
 ```
 这样，除了E:/work/git/ 下面的repo使用公司的用户外，其他目录都是用GitHub用户。你可以根据自己的实际情况设置默认用户、创建不同情景下使用的gitconfig
+
+## GUI 支持
+* Sourcetree 完美支持
+* Git Extensions：commit 对话框左下角始终显示默认的用户信息，但是实际签入的时候是调用的底层的系统git，所以能够使用正确的用户签入。
+
+参见：
+* [Author information incorrect when using multiple GitHub accounts (via conditional includes)](https://github.com/gitextensions/gitextensions/issues/8374)
+* [Support for .gitconfig conditional includes](https://github.com/gitextensions/gitextensions/issues/5492)
+
+## 参考
+[Conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)

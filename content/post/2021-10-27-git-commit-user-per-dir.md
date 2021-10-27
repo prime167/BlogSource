@@ -9,7 +9,7 @@ categories: ["TIL"]
 前天重新配置blog，在重新编写blog并推送到GitHub之后，发现使用的是公司的用户名和邮箱，原因是创建git repo后, commit 之前忘记修改.git/config,并添加GitHub用户名
 ```
 [user]
-	name = xxx
+    name = xxx
     email = xxx+xxx@users.noreply.github.com
 ```
 无奈只好重新来一遍：删除GitHub仓库，删除本地.git 目录，git init，添加上述配置，提交，重新推送
@@ -26,7 +26,7 @@ categories: ["TIL"]
 [includeIf] 的语法如下，<keyword> 为关键词，<data> 是与关键词关联的数据， 具体意义由关键词决定。
 
 [includeIf "<keyword>:<data>"]
-  path = path/to/gitconfig
+    path = path/to/gitconfig
 其中支持的 keyword 有：
 
 gitdir: 其中 <data> 是一个 glob pattern 如果代码仓库的.git目录匹配 <data> 指定的 glob pattern，那么条件命中；
@@ -39,26 +39,25 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 * 公司项目放在 E:\work\git\目录下
 * 个人项目放在 E:\Code\  目录下
 * 个人博客放在 E:\Data\Blog\目录下
-
 个人项目与公司项目的差异点在：第一、使用的邮箱名不同， 个人项目会使用个人邮箱，公司项目使用公司邮箱。
 
 首先配置用户级的.gitconfig，在这里，我把默认用户配置为GitHub用户
 ```
 [user]
-	name = xxx
+    name = xxx
     email = xxx+xxx@users.noreply.github.com
 ```
 然后在这之后添加公司使用的用户
 ```
 # E:/work/git/ 下面的所有仓库引入 `.gitconfig-work` 中的配置
 [includeIf "gitdir/i:E:/work/git/"]
-	path = .gitconfig-work
+    path = .gitconfig-work
 ```
 最后创建公司项目统一的配置文件%USERPROFILE%.gitconfig-work：
 
 ```
 [user]
-  name = 张三
-  email = zhangsan@somecorp.com
+    name = 张三
+    email = zhangsan@somecorp.com
 ```
 这样，除了E:/work/git/ 下面的repo使用公司的用户外，其他目录都是用GitHub用户。你可以根据自己的实际情况设置默认用户、创建不同情景下使用的gitconfig

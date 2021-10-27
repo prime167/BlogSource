@@ -51,7 +51,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
     email = xxx+xxx@users.noreply.github.com
 ```
 然后在这之后添加公司使用的用户
-```
+```.gitconfig
 # E:/work/git/ 下面的所有仓库引入 `.gitconfig-work` 中的配置
 [includeIf "gitdir/i:E:/work/git/"]
     path = .gitconfig-work

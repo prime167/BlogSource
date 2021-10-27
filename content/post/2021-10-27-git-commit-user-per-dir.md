@@ -91,5 +91,8 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 * [Author information incorrect when using multiple GitHub accounts (via conditional includes)](https://github.com/gitextensions/gitextensions/issues/8374)
 * [Support for .gitconfig conditional includes](https://github.com/gitextensions/gitextensions/issues/5492)
 
+## 总结
+使用 **includeif**，一次配置，以后就不必为每个新的repo指定 `user.name` 和 `user.email`。
+
 ## 参考
 [Conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)

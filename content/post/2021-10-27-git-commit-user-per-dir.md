@@ -79,7 +79,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 
 [includeIf "gitdir/i:E:/work/git/"]
     path =.gitconfig-work
-... 
+...
 ```
 这样，除了E:/work/git/ 下面的repo使用公司的用户外，其他目录都是用GitHub用户。你可以根据自己的实际情况设置默认用户、创建并使用不同情景下使用的用户信息
 

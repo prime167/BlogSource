@@ -12,6 +12,7 @@ categories: ["blog"]
 * 2019/10/18 添加Gitmen评论系统
 * 2019/11/25 添加 .nojekyll 文件解决以“.”开头的tag页面显示404问题
 * 2020/6/16 内容过期提醒
+* 2021/10/25 重写丢失的blog，更换maupassant主题，配置utteranc评论系统
 
 ## 注册GitHub
 
@@ -114,24 +115,19 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 如果你写的内容具有很强的时效性，可以通过配置此项达到提醒读者的目的 如果正在浏览的某篇文章的更新时间在设置的天数之前，则会以不同的底色显示提醒或警告
 > 【注意】最后更新于 6月前，文中内容可能已过时，请谨慎使用。
 
-## 配置Gitment评论系统
-event 主题继承了Gitment的配置
+## 配置utteranc评论系统
+[utterances](https://github.com/utterance/utterances) 是一款基于 GitHub issues 的评论工具。
+首先创建评论存储库，例如https://github.com/prime167/BlogComment
+然后打开https://github.com/apps/utterances，安装utterances到刚才创建的库
+config.toml 添加配置
 ```toml
-[params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-  owner = ""              # 你的 GitHub ID
-  repo = ""               # 保存评论的repo
-  clientId = ""           # 你的 client ID
-  clientSecret = ""       # 你的 client secret
+[params.utteranc]
+  enable = true
+  repo = "prime167/BlogComment"
+  issueTerm = "title"
+  theme = "github-light"
 ```
-* 创建保存评论的repo，例如 BlogComment
-* 注册一个新的 OAuth Application
-* 点击此处 注册一个新的 OAuth Application。callback URL 填你当前blog地址，例如我的是 https://prime167.github.io/ 其他项目随意填写。点击注册应用后会得到一个 client ID 和一个 client secret。
-* 填入toml配置
-* 初始化
 
-页面发布后，你需要访问页面并使用你的 GitHub 账号登录（请确保你的账号是第二步所填 repo 的 owner），点击初始化按钮。之后其他用户即可在该页面发表评论。
-
-通过查看repo可以发现，评论是以issue的方式保存的，初始化就是创建以文章标题为名的issue，他人在博客文章下的评论会保存在对应issue里
 ## 添加新文章
 
 运行

@@ -1,5 +1,5 @@
 @echo off
-echo "签入markdown"
+echo "签入 markdown"
 git add . && git ci -m a && git push
 echo "hugo 生成 html"
 hugo

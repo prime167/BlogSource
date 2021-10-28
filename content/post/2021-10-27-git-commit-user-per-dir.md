@@ -92,7 +92,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 * [Support for .gitconfig conditional includes](https://github.com/gitextensions/gitextensions/issues/5492)
 
 ## 总结
-使用 **includeif**，可以按照文件夹集中管理不同的身份，不需要每次都给新的repo指定 `user.name` 和 `user.email`。
+使用 **includeif**，可以按照文件夹为不同的组织、公司、项目指定不同的身份，不需要每次都给新的repo指定 `user.name` 和 `user.email`。
 
 ## 参考
 [Conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)

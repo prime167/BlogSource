@@ -1,5 +1,5 @@
 ---
-title: "git 使用includeIf配置多用户隔离"
+title: "git 使用includeIf配置多身份隔离"
 date: 2021-10-27T09:53:28+08:00
 draft: false
 tags: ["git",".gitconfig","includeif"]
@@ -92,7 +92,7 @@ onbranch：其中 <data> 是匹配分支名的一个glob pattern。 假如代码
 * [Support for .gitconfig conditional includes](https://github.com/gitextensions/gitextensions/issues/5492)
 
 ## 总结
-使用 **includeif**，一次配置，以后就不必为每个新的repo指定 `user.name` 和 `user.email`。
+使用 **includeif**，可以按照文件夹集中管理不同的身份，不需要每次都给新的repo指定 `user.name` 和 `user.email`。
 
 ## 参考
 [Conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)

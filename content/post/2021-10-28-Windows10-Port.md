@@ -21,7 +21,7 @@ netstat -ano | findstr 1883
     # 排除ipv4动态端口占用 startport 起始端口 numberofports 端口数
     netsh int ipv4 add excludedportrange protocol=tcp startport=<your port> numberofports=1
     ```
-    我执行了两次
+    对于1313和1883端口，我执行了两次此命令：
     ```cmd
     netsh int ipv4 add excludedportrange protocol=tcp startport=1313 numberofports=1
 

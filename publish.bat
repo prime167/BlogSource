@@ -1,9 +1,9 @@
 @echo off
-echo "绛惧叆markdown"
+echo "签入markdown"
 git add . && git ci -m a && git push
-echo "hugo 鐢熸垚 html"
+echo "hugo 生成 html"
 hugo
 cd public
-echo "鍙戝竷"
+echo "发布"
 git add . && git ci -m a && git push
 cd ..

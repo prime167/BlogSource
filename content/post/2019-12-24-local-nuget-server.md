@@ -72,7 +72,7 @@ Lib1的负责人编译出dll，使用的人放到Solution1下的lib文件夹下�
 ### 创建NuGet包
 目前可以通过3种方式创建一个NuGet包：
 
-#### 1 通过NuGet命令行
+#### 1. 通过NuGet命令行
 这种方法适用于传统的基于 .NET Framework的类库
 
 1. 从 nuget.org 下载最新版本nuget.exe, 放到合适的路径，并添加到 PATH 环境变量

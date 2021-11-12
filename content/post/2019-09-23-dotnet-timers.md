@@ -7,13 +7,14 @@ draft: false
 ---
 今天简单介绍一下 .NET framework中的timer<!--more-->
 ## 概述
-目前，.NET framework中有如下几种 timer：
+目前，.NET Framework中有如下几种 timer：
 
 1. System.Timers.Timer
 1. System.Threading.Timer
 1. System.Windows.Forms.Timer
 1. System.Windows.Threading.DispatcherTimer
 1. System.Web.UI.Timer
+1. PeriodicTimer
 
 其中前两个是通用的，即可用于客户端，也可用于服务器；第三个用于winform下，第四个用于WPF下，第五个是传统的Asp.NET Page下的控件
 
@@ -192,14 +193,15 @@ private void MyTimerCallback(object state) {
     FILE_TIME filetime = new FILE_TIME();
     GetSystemTimeAsFileTime(ref filetime);
     ElapsedEventArgs elapsedEventArgs = new ElapsedEventArgs(filetime.ftTimeLow, filetime.ftTimeHigh); 
-    try {                                            
+    try {
         // To avoid ---- between remove handler and raising the event
         ElapsedEventHandler intervalElapsed = this.onIntervalElapsed;
-        if (intervalElapsed != null) {
+        if (intervalElapsed != null) 
+        {
             if (this.SynchronizingObject != null && this.SynchronizingObject.InvokeRequired)
                 this.SynchronizingObject.BeginInvoke(intervalElapsed, new object[]{this, elapsedEventArgs});
-            else                        
-                intervalElapsed(this,  elapsedEventArgs);                                   
+            else
+                intervalElapsed(this,  elapsedEventArgs);
         }
     }
     catch 

@@ -1,11 +1,11 @@
 @echo off
-echo "hugo 生成 html"
+echo "hugo generate html"
 hugo
 
-echo "签入 markdown"
+echo "Checkin markdown"
 git add . && git ci -m update && git push
 
-echo "发布"
+echo "Publish to github pages"
 cd public
 git add . && git ci -m update && git push
 cd ..

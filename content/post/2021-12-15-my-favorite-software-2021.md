@@ -42,9 +42,9 @@ draft: false
     * 双击任务栏执行特定动作，如显示桌面
   
 ## 浏览器
-* Vivaldi 支持纵向tab
+* Vivaldi 支持纵向标签
 * Microsoft Chromium Edge
-* Firefox*
+* Firefox
 * Chrome
 
 ## 浏览器插件

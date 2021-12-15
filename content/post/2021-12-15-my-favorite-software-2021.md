@@ -45,7 +45,7 @@ draft: false
 * Vivaldi 支持纵向标签
 * Microsoft Chromium Edge
 * Firefox
-* Chrome
+* ~~Chrome~~ 基本不用了
 
 ## 浏览器插件
 * uBlock origin 广告拦截

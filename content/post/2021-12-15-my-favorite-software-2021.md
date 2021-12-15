@@ -40,6 +40,7 @@ draft: false
 * 7+ Taskbar Tweaker
     * 任务栏同类项目排序
     * 双击任务栏执行特定动作，如显示桌面
+* AnyTXT Searcher 基于文件内容的文件搜索
 
 ## 浏览器
 * Vivaldi 支持纵向标签

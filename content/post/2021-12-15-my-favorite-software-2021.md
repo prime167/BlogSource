@@ -22,14 +22,14 @@ draft: false
 * SourceTree 基于WPF 更新慢
 * GitExtension 可以创建worktree
 * Git For Windows
-  
+
 ## 控制台
 * cmder
 * Windows Terminal
-  
+
 ## 远程终端
 * MobaXterm 用来管理 ubuntu 上的自建 Gitlab
-  
+
 ## 资源管理器增强
 * Q-dir 多窗格文件资源管理器
 * Everything 文件搜索
@@ -40,7 +40,7 @@ draft: false
 * 7+ Taskbar Tweaker
     * 任务栏同类项目排序
     * 双击任务栏执行特定动作，如显示桌面
-  
+
 ## 浏览器
 * Vivaldi 支持纵向标签
 * Microsoft Chromium Edge
@@ -62,14 +62,14 @@ draft: false
   
 ## PDF 阅读
 * Acrobat Reader DC
-  
+
 ## 虚拟机
 * Vmware workstation
-* 
+
 ## 压缩、解压缩
 * bandzip
 * 7zip
-  
+
 ## 网站
 * [SharpLab](https://sharplab.io/)
     

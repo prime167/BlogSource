@@ -7,7 +7,7 @@ draft: false
 ---
 整理记录一下自己常用的一些软件<!--more-->
 
-操作系统为 Windows 10 21H1
+操作系统为 Windows 10 21H2
 
 ## 开发工具
 * Visual Studio 2019

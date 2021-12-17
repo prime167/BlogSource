@@ -2,7 +2,7 @@
 title: "修复Windows 10 搜索功能"
 date: 2019-12-23T15:05:20+08:00
 tags: ["windows 10","search"]
-categories: ["技术"]
+categories: ["维护"]
 draft: false
 
 ---

@@ -5,7 +5,7 @@ draft: false
 tags: ["Windows 10",".port","hyper-V"]
 categories: ["TIL","port"]
 ---
-前几天启动hugo server时提升1313端口被占用，给分配了一个随机端口，打开自己写的程序，mqtt默认的1883端口也被占用，使用
+前几天启动hugo server时提示1313端口被占用，给分配了一个随机端口，打开自己写的程序，mqtt默认的1883端口也被占用，使用
 ```cmd
 netstat -ano | findstr 1883
 ```

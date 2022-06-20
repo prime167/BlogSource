@@ -32,7 +32,11 @@ draft: false
     * AppData\Local\Microsoft\Edge Beta\User Data
     * AppData\Local\Microsoft\Edge Dev\User Data
     * AppData\Local\Microsoft\Edge SxS\User Data
-
+#### 5.2 Google Chrome   
+    * AppData\Local\Google\Chrome\User Data
+    * AppData\Local\Google\Chrome Beta\User Data
+    * AppData\Local\Google\Chrome dev\User Data
+    * AppData\Local\Google\Chrome SxS\User Data
 ## 安装软件
 
 ## 调整系统设置

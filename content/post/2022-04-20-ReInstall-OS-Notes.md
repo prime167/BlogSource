@@ -3,7 +3,7 @@ title: "重装操作系统备忘录"
 date: 2022-04-20T14:57:20+08:00
 tags: ["windows 10","操作系统"]
 categories: ["维护"]
-draft: true
+draft: false
 
 ---
 

@@ -17,7 +17,11 @@ draft: false
 --------DataAccess
 
 
-WPF 引用 DataAccess 项目，DataAccess项目引用nuget包System.Data.SQLite，编译后
+* WPF 引用 DataAccess 项目
+
+* DataAccess项目引用nuget包System.Data.SQLite，
+
+编译后
 
 * DataAccess输出文件夹存在System.Data.SQLite文件和X646和X86，内含SQLite.Interop.dll
 * WPF输出文件夹仅存在System.Data.SQLite文件，需要手动从DataAccess输出文件夹拷贝X646和X86文件夹

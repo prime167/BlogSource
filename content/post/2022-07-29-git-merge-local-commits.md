@@ -7,38 +7,122 @@ draft: false
 
 ---
 
-## 问题
-假设一个工程有如下的结构
+git的工作区、暂存区、版本库的区分，让我们在编码的时候以渐进的方式稳步的把代码写出来。
 
-----Demo sln
+我的习惯是先在工作区和暂存区迭代，某个部分写好了用添加到暂存区，进行下一步；发现工作区太乱了或者这样写不行，可以丢弃工作区的更改。
 
---------WPF
-
---------DataAccess
-
-
-* WPF 引用 DataAccess 项目
-
-* DataAccess项目引用nuget包System.Data.SQLite，
-
-编译后
-
-* DataAccess输出文件夹存在System.Data.SQLite文件和X646和X86，内含SQLite.Interop.dll
-* WPF输出文件夹仅存在System.Data.SQLite文件，需要手动从DataAccess输出文件夹拷贝X646和X86文件夹
-
-而且每次升级System.Data.SQLite nuget包后都需要重新拷贝一次，否则会因为版本不匹配而出现异常。
-
-## 解决方法
-在DataAccess.csproj 中添加
-```xml
-  <PropertyGroup> 
-    <ContentSQLiteInteropFiles>true</ContentSQLiteInteropFiles>
-    <CopySQLiteInteropFiles>false</CopySQLiteInteropFiles>
-    <CleanSQLiteInteropFiles>false</CleanSQLiteInteropFiles>
-    <CollectSQLiteInteropFiles>false</CollectSQLiteInteropFiles>
-  </PropertyGroup>
+工作区达到一定的阶段，就提交一下。整个功能完成后可能是下面这样：
+```bash
+* 7e7af1b - (HEAD -> feat/addUser)完成
+* 215353c - 修改自测bug
+* 5fcfa4f - 完成功能
+* 34024f7 - 完成界面设计
+* 288ebcb - 开始添加用户功能
+* b36071d - (origin/main)登录功能               <----远程
+* 25b848d - init
+```
+直接合并到main稍显杂乱，先用git rebase把提交合并一下：
+要合并的是最后5个提交，使用命令
+```bash
+git rebase -i HEAD~5
 ```
 
-## 参考
-[SQLite.Interop.dll files does not copy to project output path when required by referenced project](https://stackoverflow.com/a/32639631/65994)
-[Change nuget build targets to use 'Content' rather than 'Copy' and 'Delete'](https://system.data.sqlite.org/index.html/info/2ed3cad9cc9d5938808816bbc6da92366cd5a4dc)
+git 弹出编辑器
+```bash
+pick 288ebcb 开始添加用户功能
+pick 34024f7 完成界面设计
+pick 5fcfa4f 完成功能
+pick 215353c 修改自测bug
+pick 7e7af1b 完成
+
+# Rebase b36071d..7e7af1b onto b36071d (5 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+# 
+```
+根据下面的提示，保留第一个(最上面提交)，把后面的提交合并到第一个，下面的pick改成s
+```bash
+pick 288ebcb 开始添加用户功能
+s 34024f7 完成界面设计
+s 5fcfa4f 完成功能
+s 215353c 修改自测bug
+s 7e7af1b 完成
+
+# Rebase b36071d..7e7af1b onto b36071d (5 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+# 
+```
+
+关闭后弹出编辑最终commit message
+
+```bash
+# This is a combination of 5 commits.
+# This is the 1st commit message:
+
+开始添加用户功能
+
+# This is the commit message #2:
+
+完成界面设计
+
+# This is the commit message #3:
+
+完成功能
+
+# This is the commit message #4:
+
+修改自测bug
+
+# This is the commit message #5:
+
+完成
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Jul 29 14:14:06 2022 +0800
+```
+
+改为如下，关闭
+```bash
+# This is a combination of 5 commits.
+# This is the 1st commit message:
+
+添加用户功能
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Jul 29 14:14:06 2022 +0800
+```
+
+提示rebase成功，再次运行git log
+
+```bash
+* ed8a955 - 添加用户功能
+* b36071d - 登录功能
+* 25b848d - init
+```
+大功告成，合并到主分支，推送，完美。
+
+如果功能比较大，我提交了好几十次，那还得一个一个数吗？可以用
+```bash
+git rebase -i [commit-hash]
+```
+这里的commit-hash是要合并的所有提交的**前一个**commit，比如上一个例子里，我要使用
+```bash
+git rebase -i b3706
+```
+下面的步骤完全一样，不再赘述。
+

@@ -6,7 +6,7 @@ categories: ["技术"]
 draft: false
 
 ---
-上次说了通过git rebase 合并多个提交，那如何撤销呢？
+上次说了通过git rebase 合并多个提交，那如何撤销呢？<!--more-->
 
 先运行git reflog命令查看本地命令记录
 

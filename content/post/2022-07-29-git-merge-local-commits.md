@@ -1,7 +1,7 @@
 ---
 title: "如何合并多个git commits"
 date: 2022-07-29T14:04:20+08:00
-tags: ["git","rebase"]
+tags: ["git","rebase","reflog"]
 categories: ["技术"]
 draft: false
 

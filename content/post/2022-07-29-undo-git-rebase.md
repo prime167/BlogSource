@@ -33,10 +33,8 @@ b36071d HEAD@{11}: commit: 登录功能
 git reset --hard "HEAD@{6}"
 ```
 
-运行
+直接使用commit-ish是一个效果
 ```bash
 git reset --hard 7e7af 
 ```
-
-一个效果
 

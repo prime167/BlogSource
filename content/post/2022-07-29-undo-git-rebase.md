@@ -1,5 +1,5 @@
 ---
-title: "如何撤销一个git rebase"
+title: "如何撤销一个 git rebase"
 date: 2022-07-29T15:15:20+08:00
 tags: ["git","rebase"]
 categories: ["技术"]

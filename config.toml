@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "http://prime167.github.io/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "静静地坐着"
@@ -180,7 +180,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     title = "Search"
 
   [params.social]                                         # 社交链接
-    a-email = ""
+    #a-email = ""
     #b-stack-overflow = "http://localhost:1313"
     #c-twitter = "http://localhost:1313"
     #d-facebook = "http://localhost:1313"

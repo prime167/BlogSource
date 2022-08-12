@@ -40,7 +40,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "列表"
+  name = "归档"
   weight = 20
   identifier = "archives"
   url = "/post/"

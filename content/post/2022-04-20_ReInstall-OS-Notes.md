@@ -26,7 +26,12 @@ draft: false
 ### 3、桌面快捷方式
 ### 4、环境变量
 ### 5、浏览器的UserData
-由于Google的限制，基于Chromium的浏览器无法做到完全的Portable，重装系统后扩展需要通过同步重新安装。
+> **Warning**
+> 由于Google的安全限制，基于Chromium的浏览器无法做到完全的Portable，重装系统后原来的userdata里的扩展会全部丢失，最好开启同步设置里的同步扩展选项。
+
+> **Warning**
+> 浏览器的同步扩展不会同步扩展的选项。
+
 #### 5.1 Edge    
     * AppData\Local\Microsoft\Edge\User Data
     * AppData\Local\Microsoft\Edge Beta\User Data

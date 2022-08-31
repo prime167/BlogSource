@@ -26,12 +26,6 @@ draft: false
 ### 3、桌面快捷方式
 ### 4、环境变量
 ### 5、浏览器的UserData
-> **Warning**
-> 由于Google的安全限制，基于Chromium的浏览器无法做到完全的Portable，重装系统后原来的userdata里的扩展会全部丢失，最好开启同步设置里的同步扩展选项。
-
-> **Warning**
-> 浏览器的同步扩展不会同步扩展的选项。
-
 #### 5.1 Edge    
     * AppData\Local\Microsoft\Edge\User Data
     * AppData\Local\Microsoft\Edge Beta\User Data
@@ -42,6 +36,20 @@ draft: false
     * AppData\Local\Google\Chrome Beta\User Data
     * AppData\Local\Google\Chrome dev\User Data
     * AppData\Local\Google\Chrome SxS\User Data
+> **Warning**
+> 由于Google的安全限制，基于Chromium的浏览器无法做到完全的Portable，重装系统后原来的userdata里的扩展会全部丢失，最好开启同步设置里的同步扩展选项。
+
+### 6、浏览器扩展的设置
+浏览器的同步扩展功能不会同步扩展的配置，因此需要备份某些扩展的配置
+* uBlackOrigin
+* uBlacklist
+* Proxy SwitchyOmega
+
+### 7、油猴脚本配置
+* 知乎编辑器
+> **Note**
+> 暴力猴有云同步功能，可以将所有脚本及配置备份到Dropbox或者Google drive
+
 ## 安装软件
 
 ## 调整系统设置

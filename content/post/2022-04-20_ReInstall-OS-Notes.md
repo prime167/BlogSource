@@ -42,13 +42,13 @@ draft: false
 ### 6、浏览器扩展的设置
 浏览器的同步扩展功能不会同步扩展的配置，因此需要备份某些扩展的配置
 * uBlackOrigin
-* uBlacklist
+* uBlacklist (有Dropbox、Google Drive网盘同步功能)
 * Proxy SwitchyOmega
 
 ### 7、油猴脚本配置
 * 知乎编辑器
 > **Note**
-> 暴力猴有云同步功能，可以将所有脚本及配置备份到Dropbox或者Google drive
+> 暴力猴有云同步功能，可以将所有脚本及配置备份到Dropbox或者Google Drive
 
 ## 安装软件
 

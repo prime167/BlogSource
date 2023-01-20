@@ -1,6 +1,7 @@
 ---
 title: "C# 编译错误 CS1612：无法修改“xxx”的返回值，因为它不是变量"
 date: 2019-07-30T15:51:59+08:00
+lastmod: "2023-01-20"
 draft: false
 tags: ["csharp","CS1612"]
 categories: ["技术"]
@@ -21,12 +22,19 @@ namespace Cs1612Demo
         {
             Player p = new Player();
             p.ShowLocation();
-            p.Location.x = 6; // CS1612
-            p.Location.y = 2; // CS1612
+
+            p.Location.x = 1; // property return temp value => CS1612
+
+            p._location.x = 2; // filed is ok
+
             p.ShowLocation();
+
             List<Point> _locations = new List<Point>();
-            // add..
-            _locations[0].x = 3;// CS1612
+            _locations[0].x = 3;// List indexer is just a property, and property return temp value => CS1612CS1612
+
+            Point[] _locationsArray = new Point[]{new Point()};
+            _locationsArray[0].x = 3; // array index return reference, ok
+
         }
     }
 
@@ -38,7 +46,13 @@ namespace Cs1612Demo
 
     class Player
     {
-        public Point Location { get; set; }
+        public Point Location
+        {
+            get { return _location;}
+            set { _location = value; }
+        }
+
+        public Point _location = new Point();
 
         public void ShowLocation()
         {
@@ -53,12 +67,28 @@ namespace Cs1612Demo
 上面的代码不会通过编译，错误为：
 
 ```nohighlight
-错误    CS161    无法修改“Player.Location”的返回值，因为它不是变量*
-
+错误    CS1612    无法修改“Player.Location”的返回值，因为它不是变量*
 错误    CS1612    无法修改“List<Point>.this[init]”的返回值，因为它不是变量*
 ```
 
-属性的get方法和List的索引返回的是Location的副本，而不是Location的引用。由于这个副本不保存在任何变量中，所以修改值并不会保存回Location变量，赋值没有意义。
+* 属性的get方法返回值类型，而不是Location的引用，由于Point是值类型，索引返回Location的副本。由于这个副本不保存在任何变量中，所以修改值并不会保存回Location变量，赋值没有意义。
+* 字段是直接在原值上操作
+* List的索引器是一个属性，同上
+    ```csharp
+    public T this[int index] 
+    {
+        get 
+        {
+            return _items[index]; 
+        }
+
+        set 
+        {
+            _items[index] = value;
+        }
+    }
+    ```
+* CLR 从一开始就支持数组，数组的索引返回引用，类似field
 
 消除错误的方法：
 
@@ -134,5 +164,8 @@ namespace Cs1612Demo
 [What's new in C# 7.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7)
 
 [C# 7 Series, Part 7: Ref Returns](https://blogs.msdn.microsoft.com/mazhou/2017/12/12/c-7-series-part-7-ref-returns/)
+
+[Performance traps of ref locals and ref returns in C#
+](https://devblogs.microsoft.com/premier-developer/performance-traps-of-ref-locals-and-ref-returns-in-c/)
 
 

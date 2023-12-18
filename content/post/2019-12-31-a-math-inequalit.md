@@ -28,7 +28,7 @@ x^(x+1)/(x+1)^x
 =x/(1+1/x)^x
 
 根据e的定义
-    ![Alt text](image-1.png)
+    ![Alt text](/images/image.png)
 
 所以 x^(x+1)/(x+1)^x ≈ x/e
 

@@ -17,7 +17,7 @@ draft: false
 上面的种数是指数独盘面填满的所有可能情况
 ### 参见
 
-* [Mathematics of Sudoku facts for kids]{https://kids.kiddle.co/Mathematics_of_Sudoku}
+* [Mathematics of Sudoku facts for kids](https://kids.kiddle.co/Mathematics_of_Sudoku)
 * [Mathematics of Sudoku -Wikipedia](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku)
 * [Mathematics of Sudoku -academic.com](https://en-academic.com/dic.nsf/enwiki/1368721)
 * [The Math Behind Sudoku

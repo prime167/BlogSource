@@ -101,8 +101,7 @@ params:
 
     homeInfoParams:
         Title: "静静地坐着的blog"
-        Content: >
-            - **Keep Simple** 
+        Content: Keep Simple
 
     # editPost:
     #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"

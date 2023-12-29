@@ -2,7 +2,7 @@
 title: "Windows 10 解决端口被占用问题"
 date: 2021-10-28T09:53:28+08:00
 draft: false
-tags: ["Windows 10",".port","hyper-V"]
+tags: ["Windows 10","端口","hyper-V"]
 categories: ["TIL","port"]
 ---
 前几天启动hugo server时提示1313端口被占用，给分配了一个随机端口，打开自己写的程序，mqtt默认的1883端口也被占用，使用

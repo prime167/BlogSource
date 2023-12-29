@@ -2,6 +2,6 @@
 title: "Archive"
 layout: "archives"
 url: "/archives"
-description: "Here you can see all posts"
+description: "所有日志"
 summary: "archives"
 ---

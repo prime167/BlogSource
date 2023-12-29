@@ -1,7 +1,7 @@
 ---
 title: ".NET 中的 timer"
 date: 2019-09-23T11:47:39+08:00
-tags: [".NET","csharp","timer"]
+tags: ["dotnet","csharp","timer"]
 categories: ["技术"]
 draft: false
 ---

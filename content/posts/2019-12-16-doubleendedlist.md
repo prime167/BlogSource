@@ -1,7 +1,7 @@
 ---
 title: "双端链表"
 date: 2019-12-16T14:45:50+08:00
-tags: [".NET","csharp","数据结构"]
+tags: ["dotnet","csharp","数据结构"]
 categories: ["技术"]
 draft: false
 ---

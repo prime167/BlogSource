@@ -1,7 +1,7 @@
 ---
 title: "修改NuGet全局缓存路径"
 date: 2019-12-26T16:10:06+08:00
-tags: ["nuget",".NET"]
+tags: ["nuget","dotnet"]
 categories: ["技术"]
 draft: false
 ---

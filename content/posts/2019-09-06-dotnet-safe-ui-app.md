@@ -1,7 +1,7 @@
 ---
 title: "编写线程安全的UI程序"
 date: 2019-09-06T16:43:48+08:00
-tags: [".NET","thread"]
+tags: ["dotnet","thread"]
 categories: ["技术"]
 draft: false
 ---

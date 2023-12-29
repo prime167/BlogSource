@@ -1,7 +1,7 @@
 ---
 title: ".NET 知识梳理"
 date: 2019-11-21T14:25:42+08:00
-tags: [".NET"]
+tags: ["dotnet"]
 categories: ["技术"]
 draft: false
 ---

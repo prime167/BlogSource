@@ -1,7 +1,7 @@
 ---
 title: "C# 的协变和逆变"
 date: 2019-10-08T13:22:58+08:00
-tags: [".NET","csharp","covariance", "contravariance"]
+tags: ["dotnet","csharp","covariance", "contravariance"]
 categories: ["技术"]
 draft: false
 ---

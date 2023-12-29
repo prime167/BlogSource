@@ -1,7 +1,7 @@
 ---
 title: "在Windows 7 SP1 下离线安装 .NET Framework 4.8"
 date: 2020-01-15T16:23:19+08:00
-tags: [".NET"]
+tags: ["dotnet"]
 categories: ["技术"]
 draft: false
 ---

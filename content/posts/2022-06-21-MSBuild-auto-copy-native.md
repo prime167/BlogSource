@@ -1,7 +1,7 @@
 ---
 title: "如何让MsBuild自动拷贝和更新System.Data.SQLite的运行时文件夹X64和X86"
 date: 2022-06-21T16:42:20+08:00
-tags: ["nuget","System.Data.SQLite",".NET"]
+tags: ["nuget","System.Data.SQLite","dotnet"]
 categories: ["技术"]
 draft: false
 

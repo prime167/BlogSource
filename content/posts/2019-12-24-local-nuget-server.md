@@ -1,7 +1,7 @@
 ---
 title: "局域网搭建私有nuget服务器"
 date: 2019-12-24T15:09:29+08:00
-tags: ["nuget",".NET"]
+tags: ["nuget"]
 categories: ["技术"]
 draft: false
 ---

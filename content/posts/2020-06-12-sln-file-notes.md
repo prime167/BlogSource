@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 解决方案文件格式拾遗"
 date: 2020-06-12T16:28:28+08:00
-tags: [".NET"]
+tags: ["dotnet"]
 categories: ["技术"]
 draft: false
 ---

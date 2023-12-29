@@ -13,6 +13,7 @@ categories: ["blog"]
 * 2019/11/25 添加 .nojekyll 文件解决以“.”开头的tag页面显示404问题
 * 2020/6/16 内容过期提醒
 * 2021/10/25 重写丢失的blog，更换maupassant主题，配置utteranc评论系统
+* 2023/12/29 主题更换为 PaperMod
 
 ## 注册GitHub
 

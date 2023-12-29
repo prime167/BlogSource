@@ -100,9 +100,9 @@ params:
     #           url: tags
 
     homeInfoParams:
-        Title: "Hi there \U0001F44B"
+        Title: "静静地坐着的blog"
         Content: >
-            - **Welcome to My Blog.** 
+            - **Keep Simple** 
 
     # editPost:
     #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"

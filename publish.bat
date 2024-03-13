@@ -9,3 +9,5 @@ echo "Publish to github pages"
 cd public
 git add . && git ci -m update && git push
 cd ..
+
+pause

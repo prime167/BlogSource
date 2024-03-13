@@ -21,15 +21,6 @@ minify:
     disableXML: true
     # minifyOutput: true
 
-enableGitInfo: true
-
-    frontmatter:
-        lastmod:
-        - lastmod
-        - :git
-        - date
-        - publishDate
-
 permalinks: #浏览器链接显示方式
   post: "/:title/"
   # post: "/:year/:month/:day/:title/"

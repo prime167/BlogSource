@@ -1,7 +1,7 @@
 ---
 title: "一个有趣的不等式的证明"
 date: 2019-12-31T16:16:59+08:00
-lastmod: 2024-03-13T08:40:04-07:00
+lastmod: 2024-03-13
 tags: ["math"]
 categories: ["数学"]
 draft: false

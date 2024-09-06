@@ -2,7 +2,7 @@ baseURL: "http://prime167.github.io/"
 languageCode: zh-cn
 title: "静静地坐着"
 
-theme: PaperMod                       # 主题名字，和themes文件夹下的一致
+theme: hugo-PaperMod                       # 主题名字，和themes文件夹下的一致
 
 enableInlineShortcodes: true
 enableRobotsTXT: true                 # 允许爬虫抓取到搜索引擎，建议 true

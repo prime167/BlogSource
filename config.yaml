@@ -65,7 +65,7 @@ params:
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
-    # disableThemeToggle: true
+    disableThemeToggle: true
     DateFormat: "2006-01-02"
     ShowShareButtons: false
     ShowReadingTime: true
@@ -98,9 +98,9 @@ params:
     #         - name: Tags
     #           url: tags
 
-    #homeInfoParams:
-    #    Title: "静静地坐着的blog"
-    #    Content: Keep Simple
+    homeInfoParams:
+        Title: "静静地坐着的blog"
+        Content: Keep Simple
 
     # editPost:
     #     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"

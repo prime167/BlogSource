@@ -1,5 +1,5 @@
 baseURL: "http://prime167.github.io/"
-languageCode: zh-cn
+locale: zh-cn
 title: "静静地坐着"
 
 theme: hugo-PaperMod                       # 主题名字，和themes文件夹下的一致
@@ -15,7 +15,10 @@ googleAnalytics:             # 谷歌统计
 Copyright:
 
 # hasCJKLanguage: true                  # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
-paginate: 10                          # 首页每页显示的文章数
+pagination:
+  disableAliases: false
+  pagerSize: 10
+  path: page
 
 minify:
     disableXML: true
@@ -31,7 +34,7 @@ preserveTaxonomyNames: true
 
 languages:
     en:
-        languageName: "English"
+        label: "English"
         weight: 1
         taxonomies:
           category: categories
@@ -159,7 +162,7 @@ privacy:
         disabled: false
         simple: true
 
-    twitter:
+    x:
         disabled: false
         enableDNT: true
         simple: true
@@ -175,6 +178,6 @@ privacy:
 services:
     instagram:
         disableInlineCSS: true
-    twitter:
+    x:
         disableInlineCSS: true
 
